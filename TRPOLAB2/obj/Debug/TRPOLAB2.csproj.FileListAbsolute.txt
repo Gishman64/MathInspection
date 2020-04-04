@@ -1,0 +1,11 @@
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\bin\Debug\TRPOLAB2.exe.config
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\bin\Debug\TRPOLAB2.exe
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\bin\Debug\TRPOLAB2.pdb
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.csprojAssemblyReference.cache
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.Properties.Resources.resources
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.csproj.GenerateResource.cache
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.csproj.CoreCompileInputs.cache
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.exe
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.pdb
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.MainForm.resources
+C:\Users\пользователь\source\repos\TRPOLAB2\TRPOLAB2\obj\Debug\TRPOLAB2.ManualInputForm.resources
