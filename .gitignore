@@ -33,3 +33,8 @@
 *.pdb
 *.cache
 *.zip
+.vs/TRPOLAB2/v15/.suo
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
