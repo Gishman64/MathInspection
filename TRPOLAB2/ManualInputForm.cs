@@ -135,11 +135,21 @@ namespace TRPOLAB2
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Rectangle rectangle = pictureBox2.ClientRectangle;
+            System.Drawing.Point locateCursor = Cursor.Position;
+            System.Drawing.Point point = pictureBox2.PointToClient(locateCursor);
+            pictureBox2.Refresh();
+
             System.Drawing.Point location = pictureBox2.Location;
-            System.Drawing.Point coordMouse = ManualInputForm.ActiveForm.PointToClient(Cursor.Position);
+            System.Drawing.Point coordMouse = ActiveForm.PointToClient(locateCursor);
             inputX = ((double)coordMouse.X - location.X) / rectangle.Width * 10;
             inputY = ((double)location.Y + rectangle.Height - coordMouse.Y) / rectangle.Height * 7;
             inspection(new Point(inputX, inputY));
+            SolidBrush myBrush = new SolidBrush(Color.Red);
+            Graphics formGraphics;
+            formGraphics = pictureBox2.CreateGraphics();
+            formGraphics.FillRectangle(myBrush, new Rectangle(point.X, point.Y, 4, 4));
+            myBrush.Dispose();
+            formGraphics.Dispose();
         }
 
         private void button4_Click(object sender, EventArgs e)

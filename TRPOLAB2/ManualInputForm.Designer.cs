@@ -260,15 +260,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 587);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "ManualInputForm";
             this.Text = "la";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManualInputForm_Closing);
