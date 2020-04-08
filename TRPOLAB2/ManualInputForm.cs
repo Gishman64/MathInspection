@@ -43,7 +43,7 @@ namespace TRPOLAB2
         private void inspection(Point point)
         {
             label7.Text = "Информация:";
-            label3.Text = string.Format("Точка ({0};{1}) принадлежит области: ",point.getX(),point.getY());
+            label3.Text = string.Format("Точка ({0};{1}) принадлежит области: ", point.getX(), point.getY());
             label3.Refresh();
             int numberOfZone = 0;
             foreach (Polygon p in polygons)
@@ -67,17 +67,31 @@ namespace TRPOLAB2
             using (StreamReader streamReader = new StreamReader(Path.GetFullPath("coordinates.txt")))
             {
                 string coordinatesLine = streamReader.ReadLine();
-                streamReader.Close();
-                if (validateStringFromText(coordinatesLine))
+               
+                if (!validateStringFromText(coordinatesLine))
                 {
-                    string[] parts = coordinatesLine.Split(';');
+                    return;
+                }
+                if (!fileHasNoMoreData(streamReader))
+                {
+                    return;
+                }
+                streamReader.Close();
+                string[] parts = coordinatesLine.Split(';');
 
-                    if (validatePoint(parts[0], parts[1]) && validateValues())
-                    {
-                        inspection(new Point(inputX, inputY));
-                    }
+                if (validatePoint(parts[0], parts[1]) && validateValues())
+                {
+                    inspection(new Point(inputX, inputY));
                 }
             }
+        }
+
+        private bool fileHasNoMoreData(StreamReader reader)
+        {
+            string data = reader.ReadToEnd();
+            if (data == null || data.Equals("")) return true;
+            label7.Text = "Информация: в файле должны содержаться координаты \n только одной точки (формат Х;Y)";
+            return false;
         }
 
         private bool validateStringFromText(String str)
@@ -91,7 +105,7 @@ namespace TRPOLAB2
             string[] parts = str.Split(';');
             if (parts.Length < 2 || parts.Length > 2)
             {
-                label7.Text = "Информация: не верно задан формат координа в текстовом \n файле (формат Х;Y)";
+                label7.Text = "Информация: необходимо задать не более одной точки \n файле (формат Х;Y)";
                 return false;
             }
 
@@ -154,6 +168,7 @@ namespace TRPOLAB2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация:";
             groupBox1.Enabled = true;
             groupBox3.Enabled = false;
             groupBox4.Enabled = false;
@@ -162,6 +177,7 @@ namespace TRPOLAB2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = true;
             groupBox4.Enabled = false;
@@ -170,6 +186,7 @@ namespace TRPOLAB2
 
         private void button6_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = false;
             groupBox4.Enabled = true;
@@ -178,10 +195,16 @@ namespace TRPOLAB2
 
         private void button7_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = false;
             groupBox4.Enabled = false;
             pictureBox2.Enabled = true;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

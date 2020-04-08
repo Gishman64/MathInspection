@@ -100,7 +100,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(31, 129);
+            this.button1.Location = new System.Drawing.Point(40, 126);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 31);
             this.button1.TabIndex = 2;
@@ -111,24 +111,27 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(31, 88);
+            this.textBox2.MaxLength = 14;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 22);
+            this.textBox2.Size = new System.Drawing.Size(164, 22);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(31, 43);
+            this.textBox1.MaxLength = 14;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 22);
+            this.textBox1.Size = new System.Drawing.Size(164, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(27, 21);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 71);
+            this.button2.Size = new System.Drawing.Size(168, 71);
             this.button2.TabIndex = 6;
             this.button2.Text = "Чтение координат из файла";
             this.button2.UseVisualStyleBackColor = true;
@@ -136,9 +139,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(28, 21);
+            this.button3.Location = new System.Drawing.Point(27, 21);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 66);
+            this.button3.Size = new System.Drawing.Size(167, 66);
             this.button3.TabIndex = 8;
             this.button3.Text = "Ввод рандомных координат";
             this.button3.UseVisualStyleBackColor = true;
@@ -221,7 +224,7 @@
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Location = new System.Drawing.Point(66, 398);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(211, 104);
+            this.groupBox4.Size = new System.Drawing.Size(211, 102);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ввод с rand()";
