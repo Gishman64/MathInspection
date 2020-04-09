@@ -36,6 +36,7 @@ namespace TRPOLAB2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация: ";
             if (validatePoint(textBox1.Text, textBox2.Text) && validateValues())
                 inspection(new Point(inputX, inputY));
         }
@@ -168,6 +169,7 @@ namespace TRPOLAB2
 
         private void button4_Click(object sender, EventArgs e)
         {
+            label3.Text = "Точка принадлежит области: ";
             label7.Text = "Информация:";
             groupBox1.Enabled = true;
             groupBox3.Enabled = false;
@@ -177,6 +179,7 @@ namespace TRPOLAB2
 
         private void button5_Click(object sender, EventArgs e)
         {
+            label3.Text = "Точка принадлежит области: ";
             label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = true;
@@ -186,6 +189,7 @@ namespace TRPOLAB2
 
         private void button6_Click(object sender, EventArgs e)
         {
+            label3.Text = "Точка принадлежит области: ";
             label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = false;
@@ -195,6 +199,7 @@ namespace TRPOLAB2
 
         private void button7_Click(object sender, EventArgs e)
         {
+            label3.Text = "Точка принадлежит области: ";
             label7.Text = "Информация:";
             groupBox1.Enabled = false;
             groupBox3.Enabled = false;
