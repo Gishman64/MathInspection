@@ -37,13 +37,15 @@ namespace TRPOLAB2
         private void button1_Click(object sender, EventArgs e)
         {
             label7.Text = "Информация: ";
+            label3.Text = "Точка принадлежит области:";
             if (validatePoint(textBox1.Text, textBox2.Text) && validateValues())
                 inspection(new Point(inputX, inputY));
         }
 
         private void inspection(Point point)
         {
-            label7.Text = "Информация:";
+            label7.Text = "Информация: ";
+            label3.Text = "Точка принадлежит области:";
             label3.Text = string.Format("Точка ({0};{1}) принадлежит области: ", point.getX(), point.getY());
             label3.Refresh();
             int numberOfZone = 0;
@@ -64,7 +66,8 @@ namespace TRPOLAB2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            label7.Text = "Информация: ";
+            label3.Text = "Точка принадлежит области:";
             using (StreamReader streamReader = new StreamReader(Path.GetFullPath("coordinates.txt")))
             {
                 string coordinatesLine = streamReader.ReadLine();
@@ -140,6 +143,8 @@ namespace TRPOLAB2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            label7.Text = "Информация: ";
+            label3.Text = "Точка принадлежит области:";
             Random random = new Random(seed);
             seed = random.Next();
             inputY = random.NextDouble() * 7;
